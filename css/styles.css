@@ -1087,8 +1087,9 @@ h1, h2, h3, h4 {
   transform: scaleX(1);
 }
 
-/* Player Image */
+/* Player Image - Hidden for now */
 .player-card__image-wrapper {
+  display: none;
   position: relative;
   aspect-ratio: 3/4;
   overflow: hidden;
@@ -1183,6 +1184,32 @@ h1, h2, h3, h4 {
   content: '|';
   margin: 0 var(--space-xs);
   opacity: 0.4;
+}
+
+.player-card__commit {
+  font-size: 0.875rem;
+  color: var(--red);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: var(--space-xs);
+}
+
+/* Roster Category Headers */
+.roster-category {
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  color: var(--red);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: var(--space-xl);
+  margin-bottom: var(--space-md);
+  padding-bottom: var(--space-sm);
+  border-bottom: 2px solid var(--gray);
+}
+
+.roster-category:first-of-type {
+  margin-top: 0;
 }
 
 /* --- Player Grid Responsive --- */
