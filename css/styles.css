@@ -1171,6 +1171,12 @@ h1, h2, h3, h4 {
   margin-bottom: var(--space-sm);
 }
 
+.player-card__state {
+  font-size: 1rem;
+  color: var(--white-muted);
+  margin-bottom: var(--space-sm);
+}
+
 .player-card__stats {
   font-size: 0.875rem;
   color: var(--white-dim);
