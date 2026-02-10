@@ -1201,6 +1201,34 @@ h1, h2, h3, h4 {
   margin-top: var(--space-xs);
 }
 
+/* Prospecto Profile Link Badge */
+.player-card__profile-link {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all var(--transition-base);
+  z-index: 10;
+  overflow: hidden;
+}
+
+.player-card__profile-link img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.player-card__profile-link:hover {
+  transform: scale(1.15);
+  box-shadow: 0 0 20px rgba(40, 104, 237, 0.6);
+}
+
 /* Roster Category Headers */
 .roster-category {
   font-family: var(--font-display);
