@@ -1446,6 +1446,270 @@ h1, h2, h3, h4 {
 }
 
 /* =============================================
+   TEAM OREGON - Event Landing Page
+   ============================================= */
+
+/* Taller page hero for event page */
+.page-hero--tall {
+  min-height: 60vh;
+}
+
+/* Event Badge */
+.event-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  background: var(--dark-elevated);
+  padding: var(--space-sm) var(--space-lg);
+  margin-bottom: var(--space-lg);
+  border-left: 3px solid var(--red);
+}
+
+.event-badge__date,
+.event-badge__location {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--white);
+}
+
+.event-badge__divider {
+  color: var(--white-dim);
+}
+
+/* Eligibility Note */
+.eligibility-note {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-top: var(--space-lg);
+  padding: var(--space-sm) var(--space-md);
+  background: rgba(230, 57, 70, 0.15);
+  border: 1px solid var(--red);
+  color: var(--white);
+}
+
+.eligibility-note svg {
+  color: var(--red);
+  flex-shrink: 0;
+}
+
+.eligibility-note span {
+  font-family: var(--font-display);
+  font-size: 0.875rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+/* Event Details Grid */
+.event-details {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-lg);
+  margin-top: var(--space-2xl);
+}
+
+.event-detail {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-md);
+  padding: var(--space-lg);
+  background: var(--dark-elevated);
+  border-left: 3px solid var(--red);
+}
+
+.event-detail__icon {
+  color: var(--red);
+  flex-shrink: 0;
+}
+
+.event-detail__label {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--white-dim);
+  margin-bottom: var(--space-xs);
+}
+
+.event-detail__value {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.event-detail__sub {
+  font-size: 0.875rem;
+  color: var(--white-dim);
+  margin-top: 2px;
+}
+
+/* Opportunity Cards Grid */
+.opportunity-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-lg);
+}
+
+.opportunity-card {
+  background: var(--dark-elevated);
+  padding: var(--space-2xl);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: all var(--transition-base);
+  border: 1px solid transparent;
+}
+
+.opportunity-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--red);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--transition-slow);
+}
+
+.opportunity-card:hover {
+  border-color: var(--gray-light);
+  transform: translateY(-5px);
+}
+
+.opportunity-card:hover::before {
+  transform: scaleX(1);
+}
+
+.opportunity-card__icon {
+  color: var(--red);
+  margin-bottom: var(--space-lg);
+}
+
+.opportunity-card__title {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-sm);
+}
+
+.opportunity-card__text {
+  color: var(--white-dim);
+  line-height: 1.7;
+}
+
+/* Oregon Form Styles */
+.oregon-form {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.form-row {
+  display: grid;
+  gap: var(--space-md);
+}
+
+.form-row--2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.form-row--3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.form-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--space-lg);
+}
+
+.form-submit--large {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-md) var(--space-2xl);
+  font-size: 1.125rem;
+}
+
+.form-submit--large svg {
+  transition: transform var(--transition-fast);
+}
+
+.form-submit--large:hover svg {
+  transform: translateX(5px);
+}
+
+/* Form select styling */
+select.form-input {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right var(--space-md) center;
+  padding-right: var(--space-2xl);
+}
+
+/* Team Oregon Responsive */
+@media (max-width: 1024px) {
+  .event-details {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .opportunity-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .form-row--3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .form-row--3 .form-group:last-child {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-hero--tall {
+    min-height: 50vh;
+  }
+
+  .event-badge {
+    flex-direction: column;
+    gap: var(--space-xs);
+    text-align: center;
+  }
+
+  .event-badge__divider {
+    display: none;
+  }
+
+  .event-details {
+    grid-template-columns: 1fr;
+  }
+
+  .opportunity-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-row--2,
+  .form-row--3 {
+    grid-template-columns: 1fr;
+  }
+
+  .form-row--3 .form-group:last-child {
+    grid-column: span 1;
+  }
+}
+
+/* =============================================
    GALLERY - Contact Sheet
    ============================================= */
 
